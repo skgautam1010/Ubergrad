@@ -11,7 +11,7 @@ class Requirements extends React.Component {
   }
 
   componentDidMount(){
-    fetch("http://localhost:8000/requirementsview")
+    fetch("https://ubergradbackend.herokuapp.com/requirementsview")
     .then((response)=>response.json())
     .then((data)=>this.setState({requirements:data}))
     }

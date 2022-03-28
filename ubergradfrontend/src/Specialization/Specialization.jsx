@@ -11,7 +11,7 @@ class Specialization extends React.Component {
     }
 
     componentDidMount(){
-        fetch("http://localhost:8000/specializeview")
+        fetch("https://ubergradbackend.herokuapp.com/specializeview")
         .then((response)=>response.json())
         .then((data)=>this.setState({categories:data}))
     }

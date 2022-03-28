@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-
 class Specialize(models.Model):
     domain=models.CharField(max_length=300)
 

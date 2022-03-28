@@ -14,4 +14,3 @@ class RequirementsSerializers(serializers.ModelSerializer):
     class Meta:
         model=Requirements
         fields=['id','title','body']
-        
