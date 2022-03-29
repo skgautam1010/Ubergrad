@@ -1,12 +1,8 @@
-
-
-# Create your views here.
+from cgitb import lookup
 from django.shortcuts import render
-
 # Create your views here.
 from .models import Specialize,Requirements
 from .serializers import SpecializeSerializers,RequirementsSerializers
-
 from rest_framework.generics import ListAPIView,CreateAPIView,DestroyAPIView
 
 class SpecializeView(ListAPIView):
@@ -21,6 +17,7 @@ class SpecializeCreate(CreateAPIView):
 class SpecializeDestroy(DestroyAPIView):
     queryset=Specialize.objects.all()
     serializer_class=SpecializeSerializers
+    lookup_field='id'
 
 class RequirementsView(ListAPIView):
     queryset=Requirements.objects.all()
